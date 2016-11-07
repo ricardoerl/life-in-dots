@@ -28,12 +28,12 @@ class App extends Component {
           .then(function(results) {
             if (results && results.data) {
               postsArr = postsArr.concat(results.data.data);
-              // if (results.data.paging && results.data.paging.next) {
-              //   recursiveAPICall(results.data.paging.next);
-              // } else {
-              //   resolve(postsArr);
-              // }
-              resolve(postsArr);
+              if (results.data.paging && results.data.paging.next) {
+                recursiveAPICall(results.data.paging.next);
+              } else {
+                resolve(postsArr);
+              }
+              // resolve(postsArr);
             } else {
               reject();
             }
