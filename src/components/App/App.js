@@ -64,11 +64,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className={this.state.isLoading ? "loader loader-default is-active" : ""} data-text="Loading data"></div>
-        <header className="cf relative fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l pa3">
+        <div className={this.state.isLoading ? "loader loader-default is-active" : ""} data-text="Loading data. Wait a minute."></div>
+        <header className="cf relative fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l pa3 z-1">
           <div className="dib pv1">
             <h1 className="f4 mv0 ttu orange">Social life in dots</h1>
-            <p className="mv2 gray">Each point represents every time you posted something on Facebook.</p>
+            <p className="mv2 gray">Know how many times you have posted something on Facebook.</p>
             <p className="mv0 dib">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange mr0 mr3-l" target="_blank">Ricardo Ramírez</a><a href="#" className="link pv1 pv0-l orange db dib-l" target="_blank">About the project &rarr;</a></p>
           </div>
           <div className="fn fr-l tc tr-l pv2">
