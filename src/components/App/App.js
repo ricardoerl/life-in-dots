@@ -69,7 +69,7 @@ class App extends Component {
           <div className="dib pv1">
             <h1 className="f4 mv0 ttu orange">Life in Dots</h1>
             <p className="mv2 gray">Know how many times you have posted something on Facebook.</p>
-            <p className="mv0 dib">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange mr0 mr3-l" target="_blank">Ricardo Ramírez</a><a href="#" className="link pv1 pv0-l orange db dib-l" target="_blank">About the project &rarr;</a></p>
+            <p className="mv0 dib">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange mr0 mr3-l" target="_blank">Ricardo Ramírez</a><a href="https://medium.com/@ricardoerl/life-in-dots-107c3e59ffbe#.x0qla08ue" className="link pv1 pv0-l orange db dib-l" target="_blank">About the project &rarr;</a></p>
           </div>
           <div className="fn fr-l tc tr-l pv2">
             {this.state.posts.length === 0 &&
