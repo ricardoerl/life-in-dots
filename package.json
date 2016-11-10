@@ -1,22 +1,22 @@
 {
-    "name": "life-in-dots",
-    "version": "0.1.0",
-    "private": true,
-    "devDependencies": {
-        "react-scripts": "0.7.0",
-        "tachyons": "^4.5.3"
-    },
-    "dependencies": {
-        "axios": "^0.15.2",
-        "pure-css-loader": "^1.4.1",
-        "react": "^15.3.2",
-        "react-dom": "^15.3.2",
-        "react-facebook-login": "^3.4.0"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
-    }
+  "name": "life-in-dots",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0",
+    "tachyons": "^4.5.3"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "pure-css-loader": "^1.4.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-facebook-login": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }

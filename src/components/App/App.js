@@ -10,9 +10,9 @@ class App extends Component {
     super(props);
     this.state = {
       isLoading: false,
-      name: "Unknown User",
-      avatar: "/default-user.jpg",
-      posts: []
+      name: JSON.parse(localStorage.getItem('userName')) || "Unknown User",
+      avatar: JSON.parse(localStorage.getItem('userAvatar')) || "/default-user.jpg",
+      posts: JSON.parse(localStorage.getItem('posts')) || []
     };
     this.handleFacebookLogIn = this.handleFacebookLogIn.bind(this);
     this.getAllPosts = this.getAllPosts.bind(this);
@@ -45,12 +45,15 @@ class App extends Component {
 
   handleFacebookLogIn (user) {
     let _this = this;
+    localStorage.setItem('userName', JSON.stringify(user.name));
+    localStorage.setItem('userAvatar', JSON.stringify(user.picture.data.url));
     _this.setState({
       isLoading: true,
       name: user.name,
       avatar: user.picture.data.url
     });
     this.getAllPosts(user.id, user.accessToken).then(response => {
+      localStorage.setItem('posts', JSON.stringify(response));
       _this.setState({
         isLoading: false,
         posts: response
