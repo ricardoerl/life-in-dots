@@ -87,9 +87,9 @@ class App extends Component {
           <header className="cf relative bottom-0 fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l ph3 pv2 z-2">
             <div className="dib">
               <div className="mv2">
-                <span className="v-top">Share the project</span>
-                <div className="fb-share-button dib v-top mh2" data-href="http://lifeindots.info/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a className="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flifeindots.info%2F&amp;src=sdkpreparse">Compartir</a></div>
-                <a href="https://twitter.com/share" className="twitter-share-button dib v-base mh2" data-url="http://lifeindots.info/" data-via="ricardoerl" data-related="ricardoerl">Tweet</a>
+                <span className="v-top db dib-ns mv2 mv0-ns">Share the project</span>
+                <div className="fb-share-button dib v-top mh3" data-href="http://lifeindots.info/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a className="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flifeindots.info%2F&amp;src=sdkpreparse">Compartir</a></div>
+                <a href="https://twitter.com/share" className="twitter-share-button dib v-base mh3" data-url="http://lifeindots.info/" data-via="ricardoerl" data-related="ricardoerl">Tweet</a>
               </div>
               <p className="mv2">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank">Ricardo Ramírez</a></p>
             </div>
