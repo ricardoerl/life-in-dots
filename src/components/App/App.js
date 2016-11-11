@@ -16,6 +16,7 @@ class App extends Component {
     };
     this.handleFacebookLogIn = this.handleFacebookLogIn.bind(this);
     this.getAllPosts = this.getAllPosts.bind(this);
+    this.handleDeleteCache = this.handleDeleteCache.bind(this);
   }
 
   getAllPosts (id, token) {
@@ -64,13 +65,23 @@ class App extends Component {
     });
   }
 
+  handleDeleteCache () {
+    localStorage.clear();
+    this.setState({
+      isLoading: false,
+      name: "Life in Dots",
+      avatar: "/default-user.jpg",
+      posts: []
+    });
+  }
+
   render() {
     return (
       <div>
         <div className={this.state.isLoading ? "loader loader-default is-active" : ""} data-text="Loading data. Wait a minute."></div>
         <div className="ph3 ph0-ns">
           <div className="pv3 pb6-ns tc">
-            <div className="bg-white-90 relative fixed-ns left-0 right-0 top-2-ns mw-100 mw6-m mw5-l center pv3 ph2 mb2 tc z-1 br2">
+            <div className="bg-white bg-white-90-ns relative fixed-ns left-0 right-0 top-2-ns mw-100 mw6-m mw5-l center pv3 ph2 mb2 tc z-1 br2">
               <User name={this.state.name} avatar={this.state.avatar} count={this.state.posts.length} />
               { this.state.posts.length === 0 &&
                 <FacebookLogin
@@ -84,18 +95,20 @@ class App extends Component {
             </div>
             <Timeline posts={this.state.posts} />
           </div>
-          <header className="cf relative bottom-0 fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l ph3 pv2 z-2">
+          <header className="cf relative bottom-0 fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l ph3 pv2 br2 br0-ns z-2">
             <div className="dib">
               <div className="mv2">
                 <span className="v-top db dib-ns mv2 mv0-ns">Share the project</span>
                 <div className="fb-share-button dib v-top mh3" data-href="http://lifeindots.info/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a className="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flifeindots.info%2F&amp;src=sdkpreparse">Compartir</a></div>
                 <a href="https://twitter.com/share" className="twitter-share-button dib v-base mh3" data-url="http://lifeindots.info/" data-via="ricardoerl" data-related="ricardoerl">Tweet</a>
               </div>
-              <p className="mv2">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank">Ricardo Ramírez</a></p>
+              <p className="mv2">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank" rel="noopener">Ricardo Ramírez</a></p>
             </div>
             <div className="fn fr-l tc tr-l">
                 <p className="fw3 mv2 light-silver">This app doesn't store or publish anything on your profile.</p>
-                <p className="fw3 mv2"><a href="https://www.facebook.com/settings?tab=applications" className="light-silver underline" target="_blank">Revoke access here</a></p>
+                { this.state.posts.length !== 0 &&
+                  <p className="fw3 mv2"><a href="https://www.facebook.com/settings?tab=applications" className="db dib mv2 mv0-ns light-silver underline mh2" target="_blank" rel="noopener">Revoke access here</a><a onClick={this.handleDeleteCache} className="db dib mv2 mv0-ns light-silver underline mh2 pointer">Delete data here</a></p>
+                }
             </div>
           </header>
         </div>
