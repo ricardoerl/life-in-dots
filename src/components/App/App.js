@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       isLoading: false,
-      name: JSON.parse(localStorage.getItem('userName')) || "Unknown User",
+      name: JSON.parse(localStorage.getItem('userName')) || "Life in Dots",
       avatar: JSON.parse(localStorage.getItem('userAvatar')) || "/default-user.jpg",
       posts: JSON.parse(localStorage.getItem('posts')) || []
     };
@@ -68,32 +68,34 @@ class App extends Component {
     return (
       <div>
         <div className={this.state.isLoading ? "loader loader-default is-active" : ""} data-text="Loading data. Wait a minute."></div>
-        <header className="cf relative fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l pa3 z-2">
-          <div className="dib pv1">
-            <h1 className="f4 mv0 ttu orange">Life in Dots</h1>
-            <p className="mv2 gray">Know how many times you've posted something on Facebook.</p>
-            <p className="mv0 dib">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange mr0 mr3-l" target="_blank">Ricardo Ramírez</a><a href="https://medium.com/@ricardoerl/life-in-dots-107c3e59ffbe#.x0qla08ue" className="link pv1 pv0-l orange db dib-l" target="_blank">About the project &rarr;</a></p>
-          </div>
-          <div className="fn fr-l tc tr-l pv2">
-            {this.state.posts.length === 0 &&
-              <FacebookLogin
-                appId="1611672629135041"
-                size="small"
-                scope="user_posts"
-                fields="name,email,picture.type(large)"
-                autoLoad={true}
-                callback={this.handleFacebookLogIn} />
-            }
-              <p className="f6 fw3 mv2 light-silver">We don't store or publish anything on your profile.</p>
-              <p className="f6 fw3 mv2"><a href="https://www.facebook.com/settings?tab=applications" className="light-silver underline" target="_blank">Revoke access here (search: Life in Dots)</a></p>
-          </div>
-        </header>
-        <div>
-          <div className="pa3 pb3 pb6-ns tc">
-            <User name={this.state.name} avatar={this.state.avatar} count={this.state.posts.length} />
+        <div className="ph3 ph0-ns">
+          <div className="pv3 pb6-ns tc">
+            <div className="bg-white-90 relative fixed-ns left-0 right-0 top-2-ns mw-100 mw6-m mw5-l center pv3 ph2 mb2 tc z-1 br2">
+              <User name={this.state.name} avatar={this.state.avatar} count={this.state.posts.length} />
+              { this.state.posts.length === 0 &&
+                <FacebookLogin
+                  appId="1611672629135041"
+                  size="small"
+                  scope="user_posts"
+                  fields="name,email,picture.type(large)"
+                  autoLoad={false}
+                  callback={this.handleFacebookLogIn} />
+              }
+            </div>
             <Timeline posts={this.state.posts} />
           </div>
+          <header className="cf relative bottom-0 fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l ph3 pv2 z-2">
+            <div className="dib">
+              <p className="mv1">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank">Ricardo Ramírez</a></p>
+              <p className="mv1"><a href="https://medium.com/@ricardoerl/life-in-dots-107c3e59ffbe#.x0qla08ue" className="link pv1 pv0-l orange" target="_blank">About the project &rarr;</a></p>
+            </div>
+            <div className="fn fr-l tc tr-l">
+                <p className="fw3 mv1 light-silver">This app doesn't store or publish anything on your profile.</p>
+                <p className="fw3 mv1"><a href="https://www.facebook.com/settings?tab=applications" className="light-silver underline" target="_blank">Revoke access here</a></p>
+            </div>
+          </header>
         </div>
+
       </div>
     );
   }
