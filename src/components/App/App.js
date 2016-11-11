@@ -86,12 +86,16 @@ class App extends Component {
           </div>
           <header className="cf relative bottom-0 fixed-ns w-100 left-0-ns bottom-0-ns right-0-ns bg-white tc tl-l ph3 pv2 z-2">
             <div className="dib">
-              <p className="mv1">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank">Ricardo Ramírez</a></p>
-              <p className="mv1"><a href="https://medium.com/@ricardoerl/life-in-dots-107c3e59ffbe#.x0qla08ue" className="link pv1 pv0-l orange" target="_blank">About the project &rarr;</a></p>
+              <div className="mv2">
+                <span className="v-top">Share the project</span>
+                <div className="fb-share-button dib v-top mh2" data-href="http://lifeindots.info/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a className="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flifeindots.info%2F&amp;src=sdkpreparse">Compartir</a></div>
+                <a href="https://twitter.com/share" className="twitter-share-button dib v-base mh2" data-url="http://lifeindots.info/" data-via="ricardoerl" data-related="ricardoerl">Tweet</a>
+              </div>
+              <p className="mv2">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank">Ricardo Ramírez</a></p>
             </div>
             <div className="fn fr-l tc tr-l">
-                <p className="fw3 mv1 light-silver">This app doesn't store or publish anything on your profile.</p>
-                <p className="fw3 mv1"><a href="https://www.facebook.com/settings?tab=applications" className="light-silver underline" target="_blank">Revoke access here</a></p>
+                <p className="fw3 mv2 light-silver">This app doesn't store or publish anything on your profile.</p>
+                <p className="fw3 mv2"><a href="https://www.facebook.com/settings?tab=applications" className="light-silver underline" target="_blank">Revoke access here</a></p>
             </div>
           </header>
         </div>

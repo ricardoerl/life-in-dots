@@ -30,10 +30,6 @@ class User extends Component {
             <p className="f5 lh-title">Browse all your posts on Facebook through a beautiful collage made of dots.</p>
           </div>
         )}
-        <div className="mv2">
-          <div className="fb-share-button dib v-top mh2" data-href="http://lifeindots.info/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a className="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flifeindots.info%2F&amp;src=sdkpreparse">Compartir</a></div>
-          <a href="https://twitter.com/share" className="twitter-share-button dib v-base mh2" data-url="http://lifeindots.info/" data-via="ricardoerl" data-related="ricardoerl">Tweet</a>
-        </div>
       </div>
     );
   }
