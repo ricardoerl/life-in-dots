@@ -102,7 +102,8 @@ class App extends Component {
                 <div className="fb-share-button dib v-top mh3" data-href="http://lifeindots.info/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a className="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flifeindots.info%2F&amp;src=sdkpreparse">Compartir</a></div>
                 <a href="https://twitter.com/share" className="twitter-share-button dib v-base mh3" data-url="http://lifeindots.info/" data-via="ricardoerl" data-related="ricardoerl">Tweet</a>
               </div>
-              <p className="mv2">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank" rel="noopener">Ricardo Ramírez</a></p>
+              <p className="db dib-ns mv2 mr0 mr3-ns">Developed by <a href="http://ricardoerl.com" className="link pv1 pv0-l orange" target="_blank" rel="noopener">Ricardo Ramírez.</a></p>
+              <p className="db dib-ns mv2"><a href="https://medium.com/@ricardoerl/life-in-dots-107c3e59ffbe#.kogj1iyfz" className="link pv1 pv0-l orange" target="_blank" rel="noopener">About the project</a></p>
             </div>
             <div className="fn fr-l tc tr-l">
                 <p className="fw3 mv2 light-silver">This app doesn't store or publish anything on your profile.</p>

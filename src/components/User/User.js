@@ -28,6 +28,7 @@ class User extends Component {
         ) : (
           <div>
             <p className="f5 lh-title">Browse all your posts on Facebook through a beautiful collage made of dots.</p>
+            <p className="mt0 mb3"><a href="http://i.imgur.com/00BazVQ.png" className="f6 link orange" target="_blank" rel="noopener">See an example</a></p>
           </div>
         )}
       </div>
